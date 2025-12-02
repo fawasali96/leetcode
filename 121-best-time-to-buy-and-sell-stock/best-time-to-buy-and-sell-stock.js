@@ -7,9 +7,9 @@ var maxProfit = function(prices) {
     let maxProfit = 0;
     for(let price of prices) {
         if(price < minPrice) {
-            minPrice = price
+            minPrice = price;
         } else if(price - minPrice > maxProfit) {
-            maxProfit = price - minPrice
+            maxProfit = price - minPrice;
         }
     }
     return maxProfit;
