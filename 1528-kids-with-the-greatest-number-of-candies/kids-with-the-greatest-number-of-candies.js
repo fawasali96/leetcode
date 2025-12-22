@@ -10,4 +10,4 @@ var kidsWithCandies = function(candies, extraCandies) {
         result.push(candy + extraCandies >= max);
     }
     return result;
-};
+}
