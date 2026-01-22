@@ -7,8 +7,9 @@ var digitCount = function(num) {
     for(let ch of num) {
         freq[ch]++;
     }
+    
     for(let i = 0; i < num.length; i++) {
-        if(freq[i] !== Number(num[i])) return false;
+        if(freq[i] !== Number(num[i])) return false
     }
     return true;
 };
