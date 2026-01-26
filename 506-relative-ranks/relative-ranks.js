@@ -4,14 +4,12 @@
  */
 var findRelativeRanks = function(score) {
     const sorted = [...score].sort((a, b) => b - a);
-    const map = new Map();
-    
-    for (let i = 0; i < sorted.length; i++) {
-        if (i === 0) map.set(sorted[i], "Gold Medal");
-        else if (i === 1) map.set(sorted[i], "Silver Medal");
-        else if (i === 2) map.set(sorted[i], "Bronze Medal");
-        else map.set(sorted[i], (i + 1).toString());
+    const rank = new Map();
+    for(let i = 0; i < sorted.length; i++) {
+        if(i === 0) rank.set(sorted[i], "Gold Medal")
+        else if (i === 1) rank.set(sorted[i], "Silver Medal")
+        else if (i === 2) rank.set(sorted[i], "Bronze Medal")
+        else rank.set(sorted[i], (i + 1).toString())
     }
-
-    return score.map(s => map.get(s));
+    return score.map(s => rank.get(s));
 };
